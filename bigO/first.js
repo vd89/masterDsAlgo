@@ -1,18 +1,29 @@
-const { performance } = require('perf_hooks');
-const newArray = ['nemo', 'james', 'joe'];
-const everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank'];
-const large = new Array(1000).fill('nemo');
+const { performance } = require("perf_hooks");
+const newArray = ["nemo", "james", "joe"];
+const everyone = [
+  "dory",
+  "bruce",
+  "marlin",
+  "nemo",
+  "gill",
+  "bloat",
+  "nigel",
+  "squirt",
+  "darla",
+  "hank"
+];
+const large = new Array(1000).fill("nemo");
 // Find nemo for array
 
-const findNemo = (arr) => {
+const findNemo = arr => {
   let t0 = performance.now();
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 'nemo') {
-      console.log('Found Nemo');
+    if (arr[i] === "nemo") {
+      console.log("Found Nemo");
     }
   }
   let t1 = performance.now();
-  console.log('Time to find Nemo ' + (t1 - t0) + ' ms');
+  console.log("Time to find Nemo " + (t1 - t0) + " ms");
 };
 
 findNemo(large); // O(n) ----> linear time
@@ -60,13 +71,13 @@ function printFirstItemThenFirstHalfThenSayHi100Times(items) {
   }
 
   for (var i = 0; i < 100; i++) {
-    console.log('hi'); // O(100)
+    console.log("hi"); // O(100)
   }
 }
 
 printFirstItemThenFirstHalfThenSayHi100Times(); // O(n)
 
-const boxes = ['a', 'b', 'c', 'd', 'e'];
+const boxes = ["a", "b", "c", "d", "e"];
 function logAllPairsOfArray(array) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
@@ -78,14 +89,14 @@ function logAllPairsOfArray(array) {
 logAllPairsOfArray(boxes); // O(n^2)
 
 function printAllNumbersThenAllPairSums(numbers) {
-  console.log('these are the numbers:');
-  numbers.forEach(function (number) {
+  console.log("these are the numbers:");
+  numbers.forEach(function(number) {
     console.log(number);
   });
 
-  console.log('and these are their sums:');
-  numbers.forEach(function (firstNumber) {
-    numbers.forEach(function (secondNumber) {
+  console.log("and these are their sums:");
+  numbers.forEach(function(firstNumber) {
+    numbers.forEach(function(secondNumber) {
       console.log(firstNumber + secondNumber);
     });
   });
@@ -96,7 +107,7 @@ printAllNumbersThenAllPairSums([1, 2, 3, 4, 5]); // O(n^2)
 //#5 Space complexity O(1)
 function boooo(n) {
   for (let i = 0; i < n; i++) {
-    console.log('booooo');
+    console.log("booooo");
   }
 }
 
@@ -104,7 +115,7 @@ function boooo(n) {
 function arrayOfHiNTimes(n) {
   var hiArray = [];
   for (let i = 0; i < n; i++) {
-    hiArray[i] = 'hi';
+    hiArray[i] = "hi";
   }
   return hiArray;
 }
