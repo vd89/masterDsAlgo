@@ -15,4 +15,4 @@ string.unshift('x')
 string.splice(2,0,'alien')
 console.log(string);
 
-// Static and dynamic array
+// Static and dynamic arra
